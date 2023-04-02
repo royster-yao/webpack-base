@@ -2,7 +2,7 @@ const path = require("path")
 // 引入html插件
 const HTMLPlugin = require("html-webpack-plugin")
 module.exports = {
-  mode: "production", // 设置打包的模式，production表示生产模式 development 开发模式
+  mode: "development", // 设置打包的模式，production表示生产模式 development 开发模式
   // entry: "./hello/hello.js", // 用来指定打包时的入口文件 默认 ./src/index.js
   // entry: ["./src/a.js", "./src/b.js"],
   // entry: {
@@ -63,4 +63,5 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
+  devtool: "inline-source-map",
 }
